@@ -7,7 +7,6 @@ A recursive DNS resolver written entirely from scratch in Python. Instead of usi
 
 This project was written as a conceptual proof-of-concept to understand how DNS works at the raw byte level. I am aware it is not perfect and is missing some important features like:
 
-* **Code Formatting:** The current code is written functionally just to make the concepts work. It is not formatted well yet, but I plan to refactor it into a cleaner structure soon.
 * **Complex Glue Records:** Standard lookups work perfectly, but it currently struggles to troubleshoot and resolve missing nameserver IPs if they belong to completely separate domains.
 * **No TCP Support:** The server only supports standard 512-byte UDP payloads. If a response is too large and gets truncated, it does not yet know how to fall back to a TCP connection.
 * **No Caching:** Every request performs a full lookup from the Root servers instead of remembering past answers(but this was intended as i wanted to see how the recursion worked).
